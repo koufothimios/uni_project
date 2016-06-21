@@ -1,0 +1,79 @@
+html{
+    font-size: 16px;
+}
+
+.full-width{
+    width: 100%;
+    text-align: center;
+}
+
+.not-visible{
+    opacity: 0;
+    height: 0px;
+}
+
+.rel{
+    position:relative;
+    top:0;
+    height:2rem;
+}
+
+#login_section{
+    border:1px solid #AAA;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow:0px 0px 15px 10px #DDD;
+    overflow: hidden;
+}
+
+#login_section img{
+    margin-bottom: 1rem;
+}
+
+.form-group:last-child{
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+a{
+    display: block;
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+}
+
+#email{
+    z-index: 20;
+    position: absolute;
+    top:0;
+}
+
+#email2{
+    z-index: 1;
+    position: absolute;
+    top:0;
+    left: -250px;
+}
+
+#login{
+    z-index: 20;
+    position: absolute;
+    top:0;
+    left: 57.6px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+#sign{
+    z-index: 1;
+    position: absolute;
+    top:0;
+    left: -185px;
+}
