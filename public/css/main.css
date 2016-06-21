@@ -8,8 +8,7 @@ html{
 }
 
 .not-visible{
-    opacity: 0;
-    height: 0px;
+    display: none;
 }
 
 .rel{
@@ -24,6 +23,7 @@ html{
     border-radius: 1rem;
     box-shadow:0px 0px 15px 10px #DDD;
     overflow: hidden;
+    transition: max-height 1s ease;
 }
 
 #login_section img{
@@ -43,12 +43,6 @@ html{
   align-items: center;
 }
 
-a{
-    display: block;
-    opacity: 1;
-    transition: opacity 0.2s ease-out;
-}
-
 #email{
     z-index: 20;
     position: absolute;
@@ -62,18 +56,49 @@ a{
     left: -250px;
 }
 
+#register_link{
+    z-index: 20;
+    position: absolute;
+    top:0;
+}
+
+#sign_in{
+    z-index: 1;
+    position: absolute;
+    top:0;
+    left: -250px;
+}
+
+#password{
+    z-index: 20;
+    position: absolute;
+    top:0;
+}
+
+#password2{
+    z-index: 1;
+    position: absolute;
+    top:0;
+    left: -250px;
+}
+
 #login{
     z-index: 20;
     position: absolute;
     top:0;
-    left: 57.6px;
+    left: 55px;
     padding-right: 30px;
     padding-left: 30px;
 }
 
-#sign{
+#sign_up{
     z-index: 1;
     position: absolute;
     top:0;
-    left: -185px;
+    left: -190px;
+}
+
+#fielset_container{
+    height: 100px!important;
+    overflow: hidden;
 }
