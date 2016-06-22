@@ -22,11 +22,36 @@
 @endsection
 
 @section('main')
+<div class="container">
+    @foreach($teachers as $teacher)
+        <div class="card card-block">
+        <div class="row">
+        <div class="col-md-12">
+        <div class="col-md-2">
+            <img src="{{$teacher->photo}}">
+        </div>
+        <div class="col-md-4">
+        {{$teacher->surname}} {{$teacher->name}} Ηλικία: {{$teacher->age}}
+        </div>
+        <div class="col-md-4">
 
+        </div>
+        <div class="col-md-2">
+
+        </div>
+        </div>
+        </div>
+
+
+        </div>
+    @endforeach
+</div>
 @endsection
 
 @section('js')
 <script type="text/javascript">
+    $('.card').click(function(){
 
+    });
 </script>
 @endsection
