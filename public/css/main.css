@@ -2,21 +2,6 @@ html{
     font-size: 16px;
 }
 
-.full-width{
-    width: 100%;
-    text-align: center;
-}
-
-.not-visible{
-    display: none;
-}
-
-.rel{
-    position:relative;
-    top:0;
-    height:2rem;
-}
-
 #login_section{
     border:1px solid #AAA;
     padding: 1rem;
@@ -43,64 +28,16 @@ html{
   align-items: center;
 }
 
-#email{
-    z-index: 20;
-    position: absolute;
-    top:0;
+#input_container{
+  max-height: 11rem;
+  overflow: hidden;
+  transition: max-height 0.8s ease;
 }
 
-#email2{
-    z-index: 1;
-    position: absolute;
-    top:0;
-    left: -250px;
+#input_container fieldset:last-child{
+  padding-bottom: 1rem;
 }
 
-#register_link{
-    z-index: 20;
-    position: absolute;
-    top:0;
+.max-hei{
+  max-height: 40rem!important;
 }
-
-#sign_in{
-    z-index: 1;
-    position: absolute;
-    top:0;
-    left: -250px;
-}
-
-#password{
-    z-index: 20;
-    position: absolute;
-    top:0;
-}
-
-#password2{
-    z-index: 1;
-    position: absolute;
-    top:0;
-    left: -250px;
-}
-
-#login{
-    z-index: 20;
-    position: absolute;
-    top:0;
-    left: 55px;
-    padding-right: 30px;
-    padding-left: 30px;
-}
-
-#sign_up{
-    z-index: 1;
-    position: absolute;
-    top:0;
-    left: -190px;
-}
-
-#fielset_container{
-    height: 100px!important;
-    overflow: hidden;
-}
-
-/*cbranch*/
