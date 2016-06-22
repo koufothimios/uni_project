@@ -79,3 +79,7 @@ html{
   opacity: 0;
   transition: opacity 0.8s ease;
 }
+
+#navigation_bar{
+  border-radius: 0;
+}

@@ -1,17 +1,32 @@
-@extends('layouts.app')
+@extends('layouts.default')
 
-@section('content')
+@section('nav')
+<nav id="navigation_bar" class="navbar navbar-dark bg-inverse">
 <div class="container">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+<!-- Brand -->
+<a class="navbar-brand" href="#">Logo</a>
 
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
+<!-- Links -->
+<ul class="nav navbar-nav pull-md-right">
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+    {{Auth::user()->name}}
+    </a>
+    <div class="dropdown-menu" aria-labelledby="Preview">
+    <a class="dropdown-item" href="{{url('/logout')}}">Logout</a>
     </div>
+    </li>
+</ul>
 </div>
+</nav>
+@endsection
+
+@section('main')
+
+@endsection
+
+@section('js')
+<script type="text/javascript">
+
+</script>
 @endsection

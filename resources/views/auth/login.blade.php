@@ -66,7 +66,6 @@
                         <div class="form-group">
                             <div class="rel">
                                 <a id="register_link" href="#">You don't have an account?</a>
-                                <a id="sign_in" href="#">Sign in</a>
                             </div>
                             <div><a id="reset" href="#">Forgot Your Password?</a></div>
                         </div>
