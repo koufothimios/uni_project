@@ -2,6 +2,17 @@ html{
     font-size: 16px;
 }
 
+.full-width{
+    width: 100%;
+    text-align: center;
+}
+
+.rel{
+    position:relative;
+    top:0;
+    height:2rem;
+}
+
 #login_section{
     border:1px solid #AAA;
     padding: 1rem;
@@ -39,5 +50,32 @@ html{
 }
 
 .max-hei{
-  max-height: 40rem!important;
+  max-height: 40rem;
+}
+
+.err-hei{
+  max-height: 12rem!important;
+}
+
+.rel button{
+  position: absolute;
+  top:0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+#login{
+  z-index: 2;
+  padding-left: 25px;
+  padding-right: 25px;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+#sign_up{
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.8s ease;
 }
