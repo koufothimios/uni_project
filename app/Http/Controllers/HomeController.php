@@ -26,6 +26,12 @@ class HomeController extends Controller
     public function index()
     {
         $teachers = Teacher::orderBy('surname')->orderBy('name')->get();
-        return view('home',compact('teachers'));
+        $lessons = [];
+        foreach($teachers as $teacher){
+            $lessons[$teacher->id]=$teacher->lesson;
+        }
+        //var_dump($lessons);
+        //return $lessons[1]->name;
+        return view('home',compact('teachers','lessons'));
     }
 }

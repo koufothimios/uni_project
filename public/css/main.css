@@ -93,6 +93,19 @@ html{
   cursor: pointer;
 }
 
-.col-md-2>img{
-  width: 100%;
+.col-md-6>img{
+  height: 10rem;
+  width:8rem;
+}
+
+.lessons-container{
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.min-hei{
+  max-height: 0;
+}
+
+.card-header{
 }
