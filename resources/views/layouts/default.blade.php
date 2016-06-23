@@ -4,11 +4,13 @@
         @include('includes.header')
     </head>
     <body>
-        @yield('nav')
 
-        @yield('main')
+            @yield('nav')
 
-        @yield('footer')
+            @yield('main')
+
+            @yield('footer')
+
         @include('includes.js_default')
         @yield('js')
     </body>
