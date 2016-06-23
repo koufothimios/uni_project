@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Teacher extends Model
 {
     public function lesson(){
-        return $this->hasOne(Lesson::class);
+        return $this->hasMany(Lesson::class);
     }
 }

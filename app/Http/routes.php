@@ -16,3 +16,7 @@ Route::get('/', 'HomeController@index');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::post('/grade/save', 'HomeController@save_grade');
+
+Route::post('/grade/edit', 'HomeController@edit_grade');

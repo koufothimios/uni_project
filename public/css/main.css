@@ -50,7 +50,7 @@ html{
 }
 
 .max-hei{
-  max-height: 40rem;
+  max-height: 40rem!important;
 }
 
 .err-hei{
@@ -93,7 +93,7 @@ html{
   cursor: pointer;
 }
 
-.col-md-6>img{
+.teacher-photo>img{
   height: 10rem;
   width:8rem;
 }
@@ -107,5 +107,10 @@ html{
   max-height: 0;
 }
 
-.card-header{
+.btn-secondary:focus{
+  background-color: #fff;
+}
+
+.card-header:hover{
+  background-color: #ddd;
 }
