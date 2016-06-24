@@ -114,3 +114,7 @@ html{
 .card-header:hover{
   background-color: #ddd;
 }
+
+.success-save{
+  border:1px solid green;
+}

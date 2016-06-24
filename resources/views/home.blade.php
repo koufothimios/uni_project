@@ -41,7 +41,11 @@
                         </div>
                     </div>
                 </div>
+                @if($teacher->id==Session::get('teacher_id'))
+                <ul id="list_{{$teacher->id}}" class="list-group list-group-flush lessons-container min-hei max-hei">
+                @else
                 <ul id="list_{{$teacher->id}}" class="list-group list-group-flush lessons-container min-hei">
+                @endif
                     @foreach($teacher->lesson as $lesson)
                     <form id="edit_save_form_{{$lesson->id}}" method="POST" action="{{url('/grade/save')}}">
                     <input type="hidden" name="lesson_id" value="{{$lesson->id}}">
@@ -53,7 +57,11 @@
                                 </div>
                                     @if(array_key_exists($lesson->id,$grades_final))
                                         <div class="col-sm-3">
-                                            <input id="input_{{$lesson->id}}" style="text-align:center;" class="form-control" type="text" name="grade" value="{{$grades_final[$lesson->id]}}" disabled>
+                                            @if($lesson->id==Session::get('lesson_id'))
+                                                <input id="input_{{$lesson->id}}" style="text-align:center;" class="form-control success-save" type="text" name="grade" value="{{$grades_final[$lesson->id]}}" disabled>
+                                            @else
+                                                <input id="input_{{$lesson->id}}" style="text-align:center;" class="form-control" type="text" name="grade" value="{{$grades_final[$lesson->id]}}" disabled>
+                                            @endif
                                         </div>
                                         <div id="edit_container_{{$lesson->id}}" class="col-sm-3">
                                             <button class="btn btn-secondary" type="button" id="edit_{{$lesson->id}}"><img id="icon_{{$lesson->id}}" src="images/edit.png"></button>
@@ -125,6 +133,12 @@
             $('#edit_container_'.concat(id)).append("<button class='btn btn-secondary' id='edit_"+id+"' type='submit'><img id='icon_"+id+"' src='images/save.png'></button>");
         }
     });
+
+    $('document').ready(function() {
+    setTimeout(function() {
+        $('input').removeClass('success-save');
+    }, 2000);
+});
 
 </script>
 @endsection

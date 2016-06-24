@@ -8,6 +8,7 @@ use App\Teacher;
 use Auth;
 use App\User;
 use App\Grade;
+use App\Lesson;
 use DB;
 
 class HomeController extends Controller
@@ -56,6 +57,9 @@ class HomeController extends Controller
         $grade->lesson_id=$lesson_id;
         $grade->user_id=$user_id;
         $grade->save();
+        $lesson = Lesson::find($lesson_id);
+        session()->flash('teacher_id',$lesson->teacher->id);
+        session()->flash('lesson_id',$lesson_id);
         return back();
     }
 
@@ -65,6 +69,10 @@ class HomeController extends Controller
         $lesson_id = $request->lesson_id;
         $user_id = Auth::user()->id;
         DB::table('grades')->where(array('lesson_id'=>$lesson_id,'user_id'=>$user_id))->update(array('grade'=>$grade_value));
+        $lesson = Lesson::find($lesson_id);
+        session()->flash('teacher_id',$lesson->teacher->id);
+        session()->flash('lesson_id',$lesson_id);
+        //Alert--{{ucwords(Session::get('flash_message_level'))}}
         return back();
     }
 }
