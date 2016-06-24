@@ -118,3 +118,26 @@ html{
 .success-save{
   border:1px solid green;
 }
+
+.teacher_grade_overall{
+  font-size: 2.5rem;
+}
+
+.teachers_info .row{
+  text-align: center;
+}
+
+.teacher_grade_container{
+  text-align: center;
+}
+
+.row.match-my-cols{
+  display: table;
+}
+
+.row.match-my-cols [class*="col-"]{
+    float: none;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+  }

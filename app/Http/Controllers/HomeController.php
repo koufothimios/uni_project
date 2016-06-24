@@ -33,8 +33,10 @@ class HomeController extends Controller
         $teachers = Teacher::orderBy('surname')->orderBy('name')->get();
         $lessons = [];
         $grades_final = [];
+        $teachers_average = [];
         foreach($teachers as $teacher){
             $lessons[$teacher->id]=$teacher->lesson;
+            $teachers_average[$teacher->id]=$teacher->overall_grade();
         }
         $user_id = Auth::user()->id;
         $grades = Grade::where('user_id',$user_id)->get();
@@ -42,9 +44,9 @@ class HomeController extends Controller
             $grades_final[$grade->lesson_id]=$grade->grade;
         }
         //return $grades_final;
-        //var_dump($lessons);
+        //var_dump($teachers_average);
         //return $lessons[1]->name;
-        return view('home',compact('teachers','lessons','grades_final'));
+        return view('home',compact('teachers','lessons','grades_final','teachers_average'));
     }
 
     public function save_grade(Request $request)

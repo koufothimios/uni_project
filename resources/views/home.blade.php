@@ -35,10 +35,19 @@
                             <div class="teacher-photo col-md-4 col-sm-4 col-lg-3 col-xl-6">
                                 <img src="{{$teacher->photo}}">
                             </div>
-                            <div class="col-md-6">
-                                {{$teacher->surname}} {{$teacher->name}} <br> Ηλικία: {{$teacher->age}}
+                            <div class="teachers_info col-md-6">
+                                <div class="row">
+                                {{$teacher->surname}} {{$teacher->name}}
+                                </div>
+                                <div class="row">
+                                Ηλικία: {{$teacher->age}}
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row match-my-cols">
+                        <div class="col-md-7">Μέσος όρος βαθμολογίας καθηγητή</div>
+                        <div class="col-md-5 teacher_grade_overall">{{$teachers_average[$teacher->id]}}</div>
                     </div>
                 </div>
                 @if($teacher->id==Session::get('teacher_id'))
